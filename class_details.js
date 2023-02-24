@@ -22,3 +22,22 @@ class Student {
 let newStudent = new Student('Masuda', '8', '2000-01-01');
 console.log(newStudent);
 console.log(newStudent.student_age());
+
+class StudentTwo extends Student {
+    constructor(name, classYear, birthday, guardian){
+        super(name, classYear, birthday);
+        this.guardian = {
+            motherName: guardian.motherName,
+            fatherName: guardian.fatherName,
+        }
+    }
+    get parents_name(){
+        return `father: ${this.guardian.motherName}, mother: ${this.guardian.fatherName}`;
+    }
+}
+
+let student_info = new StudentTwo('Abc', '1', '2008-01-01',
+ {motherName: 'Lorem Ipsum', fatherName: 'Ipsum Zaman'})
+ console.log(student_info.parents_name);
+ // dif between class method and normal func is to get call no need to give parenthesis for class.
+ 
