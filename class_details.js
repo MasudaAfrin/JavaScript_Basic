@@ -23,6 +23,7 @@ let newStudent = new Student('Masuda', '8', '2000-01-01');
 console.log(newStudent);
 console.log(newStudent.student_age());
 
+// inheritance
 class StudentTwo extends Student {
     constructor(name, classYear, birthday, guardian){
         super(name, classYear, birthday);
@@ -41,3 +42,16 @@ let student_info = new StudentTwo('Abc', '1', '2008-01-01',
  console.log(student_info.parents_name);
  // dif between class setter and normal func is to get call no need to give parenthesis for class.
  console.log("Stduent age " + student_info.student_age());
+
+ // class method - static - means only accessible from class, not object
+class User {
+    constructor(name, email){
+        this.name = name;
+        this.email = email;
+    }
+
+    static user_statuses(){
+        return ['active', 'inactive', 'frozen', 'blacklist'];
+    }
+}
+console.log(User.user_statuses());
