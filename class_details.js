@@ -39,5 +39,5 @@ class StudentTwo extends Student {
 let student_info = new StudentTwo('Abc', '1', '2008-01-01',
  {motherName: 'Lorem Ipsum', fatherName: 'Ipsum Zaman'})
  console.log(student_info.parents_name);
- // dif between class method and normal func is to get call no need to give parenthesis for class.
- 
+ // dif between class setter and normal func is to get call no need to give parenthesis for class.
+ console.log("Stduent age " + student_info.student_age());
